@@ -3,8 +3,8 @@
       <h1 class="display-4">Data map Apotek di Surabaya.</h1>
       <p class="lead">Program ini dibuat untuk memenuhi tugas Sistem Informasi Geografis.</p>
       <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <p>untuk source code program bisa didapatkan di link github saya dibawah ini.</p>
+      <a class="btn btn-primary btn-lg" href="https://github.com/dandy9999/sig" role="button">Github Repo</a>
     </div>
 
 

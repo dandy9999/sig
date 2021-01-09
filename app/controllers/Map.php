@@ -13,13 +13,7 @@ class Map extends Controller {
 
 
 
-
-    public function getMapById()
-    {
-        echo json_encode($this->model('Apotek_model')->getApotekById($_POST['id']));
-    }
-
-    public function getAllMap()
+    public function getMap()
     {
         $id_apotik = isset($_POST['apotik_id']) ? $_POST['apotik_id'] : null;
         $keyword_name = isset($_POST['keyword']) ? $_POST['keyword'] : null;

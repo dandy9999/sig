@@ -49,7 +49,7 @@ $(function() {
 
         
         $.ajax({
-            url: 'http://localhost/sig/public/Map/getAllMap',
+            url: 'http://localhost/sig/public/Map/getMap',
             data:param,
             method: 'post',
             dataType: 'json',

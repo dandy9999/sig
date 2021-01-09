@@ -35,7 +35,7 @@
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" method="GET" action="<?= BASEURL; ?>/Map" >
-      <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Cari Apotek" aria-label="Search">
+      <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Cari Apotek" aria-label="Search" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cari</button>
     </form>
   </div>
