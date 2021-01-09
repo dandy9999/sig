@@ -77,10 +77,9 @@ class Apotek_model {
     }
 
 
-    public function cariDataApotek()
+    public function cariDataApotek($keyword)
     {
-        $keyword = $_POST['keyword'];
-        $query = "SELECT * FROM apotek WHERE nama or hour LIKE :keyword";
+        $query = "SELECT * FROM apotek WHERE nama LIKE :keyword";
         $this->db->query($query);
         $this->db->bind('keyword', "%$keyword%");
         return $this->db->resultSet();

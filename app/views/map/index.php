@@ -1,13 +1,8 @@
-<div class="row mb-3">
-    <div class="col-lg-6">
-    <button type="button" class="btn btn-primary loadMapData" id="loadMapData">
-        Load Map
-    </button>
-    </div>
-</div>
+
 <div id="map"></div>
 
 <script type="text/javascript">
+    var id_apotik = <?php echo $data['id_apotik'] !== null ?  $data['id_apotik'] : 'null';?>;
     /* contoh menggunakan ajax untuk mendapatkan list dari database dalam bentuk json*/
     /*async function GetMapData() {
         try {

@@ -37,21 +37,40 @@ $(function() {
         
     });
 
-    $('.loadMapData').on('click', function() {
-        
+   
+        var param = {}
+        const urlParams = new URLSearchParams(window.location.search);
 
-        const id = $(this).data('id');
+        if(id_apotik !== null){
+            param = {apotik_id : id_apotik}
+        }else if( urlParams.get('keyword') !== null){
+            param = {keyword:  urlParams.get('keyword')}
+        }
+
         
         $.ajax({
             url: 'http://localhost/sig/public/Map/getAllMap',
-            data: {id : id},
+            data:param,
             method: 'post',
             dataType: 'json',
             success: function(data) {
                 console.log(data);
+                if(typeof data === "object" &&  !$.isArray(data)){
+                    data = [data]
+                }
+                 var map = L.map('map').setView([data[0].lat,data[0].lng], data.length > 1 ? 13 : 17);
+
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map)
+
+                data.forEach((item) => {
+                    L.marker([item.lat, item.lng]).addTo(map)
+                        .bindPopup(item.nama);
+                })
             }
         });
         
-    });
+   
 
 });

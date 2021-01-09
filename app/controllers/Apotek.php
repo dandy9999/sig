@@ -66,7 +66,7 @@ class Apotek extends Controller {
     public function cari()
     {
         $data['judul'] = 'Daftar Apotek';
-        $data['apt'] = $this->model('Apotek_model')->cariDataApotek();
+        $data['apt'] = $this->model('Apotek_model')->cariDataApotek($_POST['keyword']);
         $this->view('templates/header', $data);
         $this->view('apotek/index', $data);
         $this->view('templates/footer');

@@ -37,6 +37,7 @@
                   <a href="<?= BASEURL; ?>/Apotek/hapus/<?= $apt['id']; ?>" class="badge badge-danger float-right" onclick="return confirm('yakin?');">hapus</a>
                   <a href="<?= BASEURL; ?>/Apotek/ubah/<?= $apt['id']; ?>" class="badge badge-success float-right tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $apt['id']; ?>">ubah</a>
                   <a href="<?= BASEURL; ?>/Apotek/detail/<?= $apt['id']; ?>" class="badge badge-primary float-right">detail</a>
+                  <a href="<?= BASEURL; ?>/Map/<?= $apt['id']; ?>" class="badge badge-primary float-right">open map</a>
               </li>
             <?php endforeach; ?>
           </ul>      
